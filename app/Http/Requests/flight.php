@@ -22,7 +22,13 @@ class flight extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'airline_id'=>'nullable|string',
+            'flight_number'=>'required|string',
+            'departure_time'=>'date_formatH:i',
+            'arrival_airport'=>'required|string',
+            'arrival_time'=>'date_formatH:i',
+            'departure_airport'=>'nullable|string',
+            'status'=>'required|string'
         ];
     }
 }
