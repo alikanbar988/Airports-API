@@ -24,7 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Route::post('/airline', [AirlineController::class, 'store']);
 Route::post('register',[AuthController::class,'register']);
 Route::get('register',[AuthController::class,'register']);
+
 Route::post('login',[AuthController::class,'login']);
 Route::get('login',[AuthController::class,'login']);
+
 Route::resource('airline', AirlineController::class);
 Route::resource('flight', FlightController::class);
