@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\API\FlightController;
 use App\Http\Controllers\API\AirlineController;
+use App\Http\Controllers\API\PessangerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,4 @@ Route::get('login',[AuthController::class,'login']);
 
 Route::resource('airline', AirlineController::class);
 Route::resource('flight', FlightController::class);
+Route::resource('pessanger', PessangerController::class);

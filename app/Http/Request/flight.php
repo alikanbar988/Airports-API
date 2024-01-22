@@ -11,7 +11,7 @@ class flight extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,13 +22,15 @@ class flight extends FormRequest
     public function rules(): array
     {
         return [
-            'airline_id'=>'nullable|string',
-            'flight_number'=>'required|string',
-            'departure_time'=>'date_formatH:i',
-            'arrival_airport'=>'required|string',
-            'arrival_time'=>'date_formatH:i',
-            'departure_airport'=>'nullable|string',
-            'status'=>'required|string'
+            
+           'flight_number'=>'required|string',
+           'departure_time'=>'date_format H:i',
+           'arrival_time'=>'required|after:departure_time',
+           'arrival_airport'=>'required|string',
+           'departure_airport'=>'nullable|string',
+           'status'=>'required|string'
+    
         ];
     }
 }
+

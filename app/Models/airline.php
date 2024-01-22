@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\flight;
+use App\Models\pessanger;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -20,4 +21,9 @@ class airline  extends Model
      {
         return $this->hasMany(flight::class);
      }
-}
+    // public function pessangers()
+    // {
+      //  return $this->hasMany(pessanger::class);
+    // }
+     
+   }

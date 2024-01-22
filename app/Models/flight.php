@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\airline;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -10,6 +11,7 @@ class flight extends Model
 {
     use HasFactory;
     protected $fillable = [
+        
         'airline_id',
         'flight_number',
         'departure_time',
@@ -20,9 +22,14 @@ class flight extends Model
 
 
     ];
-    public function airline() {
-        return $this->belongsTo(airline::class);
 
+//public function pessanger()
+//{
+  //  return $this->hasMany(pessanger::class);
+//}
+
+public function airline()
+{
+    return $this->belongsTo(Airline::class);
 }
-
 }

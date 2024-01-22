@@ -5,7 +5,6 @@ namespace App\Http\Controllers\API;
 
 use App\Models\airline;
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AirlineRequest;
 use Illuminate\Support\Facades\Validator;
@@ -53,7 +52,7 @@ class AirlineController extends Controller
         $Airline=airline::create($request->all());
         return response()->json([
             'status'=>201,
-            'artist'=>$artist
+            'airline'=>$Airline
         ],201);
     }
       

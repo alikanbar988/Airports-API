@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('airline_id')->default(4);
+            $table->unsignedBigInteger('airline_id');
             $table->string('flight_number');
             $table->dateTime('departure_time');
             $table->string('arrival_airport');

@@ -13,7 +13,7 @@ class CreateAirLine extends Command
      *
      * @var string
      */
-    protected $signature = 'airline:create';
+    protected $signature = 'Airline:create';
 
     /**
      * The console command description.

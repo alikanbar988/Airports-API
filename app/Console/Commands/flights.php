@@ -26,9 +26,9 @@ class flights extends Command
      */
     public function handle()
     {
-        $mea_airline = airline::whereCode("ME")->get()->first();
+        $mea = airline::whereCode("ME")->get()->first();
       
-       $flight= $mea_airline->flights()->create([
+       $flight= $mea->flights()->create([
          "flight_number"=>"222",
            "departure_time"=>"2023-01-11 14:22:03",
             "arrival_time"=>"2023-01-15 13:12:01",
@@ -38,17 +38,17 @@ class flights extends Command
 
         ]);
         
-        $farnce_airline = airline::whereCode("FP")->get()->first();
+       // $farnce_airline = airline::whereCode("FP")->get()->first();
       
-        $flight= $farnce_airline ->flights()->create([
-          "flight_number"=>"555",
-            "departure_time"=>"2024-02-11 14:22:03",
-             "arrival_time"=>"2024-03-20 13:12:01",
-             "arrival_airport"=>"PARIS",
-             "departure_airport"=>"PARIS",
-             "status"=>"YES"
+        //$flight= $farnce_airline ->flights()->create([
+          //"flight_number"=>"555",
+            //"departure_time"=>"2024-02-11 14:22:03",
+             //"arrival_time"=>"2024-03-20 13:12:01",
+             //"arrival_airport"=>"PARIS",
+             //"departure_airport"=>"PARIS",
+             //"status"=>"YES"
  
-         ]);
+         //]);
          
     }
 }
